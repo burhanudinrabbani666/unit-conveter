@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= title %></title>
+    <title>Conveter &mdash; <%= title %></title>
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
     <div class="app">
-      <h1 class="heading-1">Unit conveter</h1>
+      <h1 class="heading-1">Unit Converter</h1>
       <nav class="navigation">
         <ul class="navigation__list">
           <li>
@@ -28,7 +28,7 @@
           <li>
             <a
               class="navigation__item <%= title === 'temprature' ? 'active' : ''%>"
-              href="/temprature"
+              href="/temperature"
               >Temperatute
             </a>
           </li>
@@ -50,7 +50,7 @@
         </div>
         
         <div class="form__input-container">
-          <label for="value">Enter the length to convert</label>
+          <label for="value">Enter the <%= title %> to convert</label>
           <input
           type="text"
           name="value"

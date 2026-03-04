@@ -38,9 +38,9 @@ app.get("/weight", (req, res) => {
   });
 });
 
-app.get("/temprature", (req, res) => {
+app.get("/temperature", (req, res) => {
   res.render("index", {
-    title: "temprature",
+    title: "temperature",
     units: ["celsius", "fahrenheit", "kelvin"],
   });
 });
@@ -85,7 +85,7 @@ app.post("/length", async (req, res, next) => {
   }
 
   const meters = toMeters[from](parseFloat(value));
-  const result = fromMeters[to](parseFloat(meters));
+  const result = fromMeters[to](parseFloat(meters).toFixed(6));
 
   res.redirect(`/result?result=${result}&from=${from}&to=${to}&value=${value}`);
 });
@@ -114,7 +114,7 @@ app.post("/weight", (req, res) => {
   }
 
   const grams = toGrams[from](parseFloat(value));
-  const result = fromGrams[to](parseFloat(grams));
+  const result = fromGrams[to](parseFloat(grams).toFixed(6));
 
   res.redirect(`/result?result=${result}&from=${from}&to=${to}&value=${value}`);
 });
@@ -139,7 +139,7 @@ app.post("/temprature", (req, res) => {
   }
 
   const celsius = toCelsius[from](parseFloat(value));
-  const result = fromCelsius[to](parseFloat(celsius));
+  const result = fromCelsius[to](parseFloat(celsius).toFixed(6));
 
   res.redirect(`/result?result=${result}&from=${from}&to=${to}&value=${value}`);
 });
