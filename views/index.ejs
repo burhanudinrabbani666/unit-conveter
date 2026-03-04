@@ -15,8 +15,9 @@
           <li class="navigation__item"><a href="/">Weight</a></li>
           <li class="navigation__item"><a href="/">Temperatute </a></li>
         </ul>
-
-        <form action="/">
+      </nav>
+      <form action="/" method="post">
+        <div class="form__input-container">
           <label for="lengthValue">Enter the length to convert</label>
           <input
             type="text"
@@ -24,8 +25,39 @@
             id="lengthValue"
             placeholder="Insert value"
           />
-        </form>
-      </nav>
+        </div>
+
+        <div class="form__input-container">
+          <label for="lengthFrom">Unit to convert from</label>
+          <select name="lengthFrom" id="lengthFrom">
+            <option value=""></option>
+            <option value="milimeter">milimeter</option>
+            <option value="centimeter">centimeter</option>
+            <option value="meter">meter</option>
+            <option value="kilometer">kilometer</option>
+            <option value="inch">inch</option>
+            <option value="foot">foot</option>
+            <option value="yard">yard</option>
+            <option value="mile">mile</option>
+          </select>
+        </div>
+
+        <div class="form__input-container">
+          <label for="lengthTo">Unit to convert to</label>
+          <select name="lengthTo" id="lengthTo">
+            <option value=""></option>
+            <option value="milimeter">milimeter</option>
+            <option value="centimeter">centimeter</option>
+            <option value="meter">meter</option>
+            <option value="kilometer">kilometer</option>
+            <option value="inch">inch</option>
+            <option value="foot">foot</option>
+            <option value="yard">yard</option>
+            <option value="mile">mile</option>
+          </select>
+        </div>
+        <button type="submit">Convert</button>
+      </form>
     </div>
   </body>
 </html>
