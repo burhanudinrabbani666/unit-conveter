@@ -63,6 +63,7 @@ select {
   flex-direction: column;
 }
 
+.reset-button,
 button {
   border-radius: 4px;
   border: 1px solid transparent;
@@ -74,8 +75,26 @@ button {
   transition: all 0.4s;
 }
 
+.reset-button:hover,
 button:hover,
+.reset-button:active,
 button:active {
   background-color: var(--color-blue-dark);
   cursor: pointer;
+}
+
+.active {
+  color: var(--color-blue);
+  border-bottom: 1px solid var(--color-blue);
+}
+
+.result__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.result__text {
+  font-size: large;
+  font-weight: 600;
 }
