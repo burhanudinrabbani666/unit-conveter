@@ -85,7 +85,7 @@ app.post("/length", async (req, res, next) => {
   }
 
   const meters = toMeters[from](parseFloat(value));
-  const result = fromMeters[to](parseFloat(meters).toFixed(6));
+  const result = fromMeters[to](parseFloat(meters));
 
   res.redirect(`/result?result=${result}&from=${from}&to=${to}&value=${value}`);
 });
@@ -114,7 +114,7 @@ app.post("/weight", (req, res) => {
   }
 
   const grams = toGrams[from](parseFloat(value));
-  const result = fromGrams[to](parseFloat(grams).toFixed(6));
+  const result = fromGrams[to](parseFloat(grams));
 
   res.redirect(`/result?result=${result}&from=${from}&to=${to}&value=${value}`);
 });
@@ -139,7 +139,7 @@ app.post("/temprature", (req, res) => {
   }
 
   const celsius = toCelsius[from](parseFloat(value));
-  const result = fromCelsius[to](parseFloat(celsius).toFixed(6));
+  const result = fromCelsius[to](parseFloat(celsius));
 
   res.redirect(`/result?result=${result}&from=${from}&to=${to}&value=${value}`);
 });
